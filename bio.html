@@ -1,0 +1,144 @@
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Спутник</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+        <link rel ="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+    <body>
+        
+        <svg>
+            <filter id="wavy">
+                <feTurbulence x="0" y="0" baseFrequency="0.009" numOctaves="5" seed="2">   
+                <animate attributeName="baseFrequency" dur="10s" values="0.02; 0.005; 0.02" repeatCount="indefinite"></animate>
+            </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" scale="30"></feDisplacementMap>
+            </filter>
+        </svg>    
+       
+<div class="main">  
+
+    <ul class = "goh">
+       <li><a class="top" href="index.html" data-text="Home">Главная</a></li>
+       <li><a class="top" href="infras.html" data-text="About">Ракеты</a></li>
+       <li><a class="top" href="fam.html" data-text="Home">проекты</a></li>
+      
+       <li><a class="top" href="proekt.html" data-text="Home">источники</a></li>
+    </ul>
+       <header class="header">
+        <div class="box">
+            
+         <h2>Спутник</h2>
+       </div>
+       </header>
+ <span class="SkewedOne"></span> 
+    <span class="SkewedTwo"></span> 
+<section>
+    <div class="circle circle5">
+         <img  src="images/big.jpg">
+    </div>
+       
+    
+    
+    <div id="bobr">
+      <h2 class="frost _anim-items _anim">Спутник</h2>
+      <p class="adic _anim-items _anim">Спу́тник (индекс ГРАУ — 8К71ПС) — ракета-носитель первых искусственных спутников Земли, базой для которой служила межконтинентальная баллистическая ракета 8К71 (Р-7). Первая ракета в истории достигшая первой космической скорости.
+
+       Произведено два (оба успешные) пуска. На орбиту были выведены спутники ПС-1 и ПС-2. Наименование «Спутник» (вместе с обозначением 8К71ПС) было присвоено ракете-носителю после подтверждения факта выведения полезной нагрузки на орбиту. Первая ступень ракеты состоит из четырёх идентичных по конструкции блоков, напоминающих конусы, размещённых по параллельной схеме вокруг блока второй ступени.</p>
+       <p class="adic _anim-items _anim">Зажигание двигателей первой и второй ступени происходит одновременно, на Земле. Со штатной боевой ракеты, послужившей основой для ракеты «Спутник», были сняты головная часть, вся аппаратура системы управления полётом вместе с отсеком, в котором она размещалась и на котором крепилась головная часть большей массы. Отсек был заменён лёгким коническим переходным отсеком, в котором размещалась минимально необходимая для обеспечения полёта аппаратура системы управления.</p>
+    </div>
+    <footer class ="footer">
+        <div class ="con">
+            <div class ="row">
+                <div class="footer-col">
+                    <h4>Организация</h4>
+                    <ul>
+                        <li><a href ="#">ГЦДТ имени В.П.Чкалова</a></li>
+                     
+                     </ul>
+                 </div>
+                 <div class="footer-col">
+                     <h4>Автор</h4>
+                    <ul>
+                        <li><a href ="#">Бусыгин Артём Дмитриевич</a></li>
+                      
+                     </ul>
+                 </div>
+                 <div class="footer-col">
+                     <h4>Страницы</h4>
+                    <ul>
+                     <li><a href ="index.html">Главная</a></li>
+                        <li><a href ="135.html">Ракеты</a></li>
+                        <li><a href ="fam.html">Проекты</a></li>
+                    
+                        <li><a href ="proekt.html">Источники</a></li>
+                     </ul>
+                 </div>
+                 <div class="footer-col">
+                     <h4>Контакты</h4>
+                     <div class ="sg">                  
+                       <a href ="#"><i class="fab fa-facebook-f"></i></a>
+                       <a href ="#"><i class="fab fa-twitter"></i></a>
+                       <a href ="#"><i class="fab fa-instagram"></i></a>
+ 
+                     </div>
+                </div>
+            </div>
+        </div>
+        
+     </footer>  
+</section>
+ <script>
+     const SkewedOne = document.querySelector('.SkewedOne');
+     const SkewedTwo = document.querySelector('.SkewedTwo');
+     window.addEventListener('scroll',function(){
+         const value1 = -15 + window.scrollY/45;
+         const value2 = 15 + window.scrollY/-45;
+         SkewedOne.style.transform = "skewY(" + value1 + "deg)";
+         SkewedTwo.style.transform = "skewY(" + value2 + "deg)";
+     })
+ </script>
+
+</div>
+    <script >
+        const animItems = document.querySelectorAll('._anim-items');
+
+if (animItems.length > 0) {
+    window.addEventListener('scroll', animOnScroll);
+    function animOnScroll(){
+        for (let index = 0; index < animItems.length; index++) {
+            const animItem = animItems[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                animItem.classList.add('_active');
+            } else {
+                if (!animItem.classList.contains('_anim')) {
+                animItem.classList.remove('_active');
+            }
+
+            }
+        }
+    }
+    function offset(el) {
+        const rect = el.getBoundingClientRect()
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    }
+    setTimeout(() => {
+        animOnScroll();
+    }, 300);
+}
+    </script>
+    </body>
+</html>

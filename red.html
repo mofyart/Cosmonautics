@@ -1,0 +1,165 @@
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Редстоун</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+        <link rel ="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+    <body>
+        
+        <svg>
+            <filter id="wavy">
+                <feTurbulence x="0" y="0" baseFrequency="0.009" numOctaves="5" seed="2">   
+                <animate attributeName="baseFrequency" dur="10s" values="0.02; 0.005; 0.02" repeatCount="indefinite"></animate>
+            </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" scale="30"></feDisplacementMap>
+            </filter>
+        </svg>    
+       
+<div class="main">  
+    <ul class ="bos">
+        <li></li>
+        <li ></li>
+        <li ></li>
+        <li ></li>
+        <li ></li>
+        <li ></li>
+        <li ></li>
+        <li ></li>
+        <li ></li>
+        <li ></li>
+        <li></li>
+        <li ></li>
+        <li ></li>
+        <li ></li>
+        <li></li>
+    </ul>
+
+    <ul class = "goh">
+       <li><a class="top" href="index.html" data-text="Home">Главная</a></li>
+       <li><a class="top" href="infras.html" data-text="About">Ракеты</a></li>
+       <li><a class="top" href="fam.html" data-text="Home">проекты</a></li>
+    
+       <li><a class="top" href="proekt.html" data-text="Home">источники</a></li>
+    </ul>
+       <header class="header">
+        <div class="box">
+            
+         <h2>Редстоун</h2>
+       </div>
+       </header>
+ <span class="SkewedOne"></span> 
+    <span class="SkewedTwo"></span> 
+<section>
+    <div class="circle circle1">
+         <img  src="images/Vanguard_roc.jpg">
+    </div>
+       
+    
+    
+    <div id="bobr">
+      <h2 class="frost _anim-items _anim">Редстоун</h2>
+      <p class="adic _anim-items _anim">Редстоун (англ. Redstone; < red — красный + stone — камень) — семейство американских ракет состоящее из боевых баллистических ракет, ракет-носителей и геофизических ракет. Боевая баллистическая ракета оперативно-тактического назначения PGM-11 Redstone — первый представитель семейства, является базовой для всех остальных вариантов исполнения. Разработка велась ABMA (Army Ballistic Missile Agency — Агентство по баллистическим ракетам Армии США).</p>
+     
+      <h2 class="frost _anim-items _anim">PGM-11 Redstone</h2>
+      <p class="adic _anim-items _anim">Создана корпорацией «Крайслер», которая воплотила в металле систему, разработанную под руководством бригадного генерала Т. Винсента командой В. фон Брауна в конце 1940-х годов в США. Является прямым развитием немецкой ракеты Фау-2.
+
+        Ракета совершила первый полёт 20 августа 1953 года. Находилась на вооружении армии США с 1958 по 1964 год. Была оснащена термоядерной отделяющейся головной частью. Максимальная дальность — 600 км. Ракета запускалась с мобильного комплекса, который включал до десятка грузовых автомобилей, включая заправщики жидкого кислорода и горючего.</p>
+        
+      
+    </div>
+    <footer class ="footer">
+        <div class ="con">
+            <div class ="row">
+                <div class="footer-col">
+                    <h4>Организация</h4>
+                    <ul>
+                        <li><a href ="#">ГЦДТ имени В.П.Чкалова</a></li>
+                     
+                     </ul>
+                 </div>
+                 <div class="footer-col">
+                     <h4>Автор</h4>
+                    <ul>
+                        <li><a href ="#">Бусыгин Артём Дмитриевич</a></li>
+                      
+                     </ul>
+                 </div>
+                 <div class="footer-col">
+                     <h4>Страницы</h4>
+                    <ul>
+                     <li><a href ="index.html">Главная</a></li>
+                        <li><a href ="135.html">Ракеты</a></li>
+                        <li><a href ="fam.html">Проекты</a></li>
+                      
+                        <li><a href ="proekt.html">Источники</a></li>
+                     </ul>
+                 </div>
+                 <div class="footer-col">
+                     <h4>Контакты</h4>
+                     <div class ="sg">                  
+                       <a href ="#"><i class="fab fa-facebook-f"></i></a>
+                       <a href ="#"><i class="fab fa-twitter"></i></a>
+                       <a href ="#"><i class="fab fa-instagram"></i></a>
+ 
+                     </div>
+                </div>
+            </div>
+        </div>
+        
+     </footer>  
+</section>
+ <script>
+     const SkewedOne = document.querySelector('.SkewedOne');
+     const SkewedTwo = document.querySelector('.SkewedTwo');
+     window.addEventListener('scroll',function(){
+         const value1 = -15 + window.scrollY/45;
+         const value2 = 15 + window.scrollY/-45;
+         SkewedOne.style.transform = "skewY(" + value1 + "deg)";
+         SkewedTwo.style.transform = "skewY(" + value2 + "deg)";
+     })
+ </script>
+
+</div>
+    <script >
+        const animItems = document.querySelectorAll('._anim-items');
+
+if (animItems.length > 0) {
+    window.addEventListener('scroll', animOnScroll);
+    function animOnScroll(){
+        for (let index = 0; index < animItems.length; index++) {
+            const animItem = animItems[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                animItem.classList.add('_active');
+            } else {
+                if (!animItem.classList.contains('_anim')) {
+                animItem.classList.remove('_active');
+            }
+
+            }
+        }
+    }
+    function offset(el) {
+        const rect = el.getBoundingClientRect()
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    }
+    setTimeout(() => {
+        animOnScroll();
+    }, 300);
+}
+    </script>
+    </body>
+</html>

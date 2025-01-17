@@ -1,0 +1,155 @@
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Главная</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+        <link rel ="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+    <body>
+        <div id="black"> </div>
+        <div id="God">
+            <div class ="fefe">
+                <div class ="ring"></div>
+                <div class ="ring"></div>
+                <div class ="ring"></div>
+                <p>Loading...</p>
+            </div>
+           
+        </div>
+<div class="main">  
+    <div class = "ban">
+        <div class ="rever">
+            <section>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+    
+            </section>
+        </div>
+        
+    <ul class = "goh">
+       <li><a clas="top" href="index.html" data-text="Home">Главная</a></li>
+       <li><a class="top" href="infras.html" data-text="About">ракеты</a></li>
+       <li><a class="top" href="fam.html" data-text="Home">проекты</a></li>
+       <li><a class="top" href="proekt.html" data-text="Home">источники</a></li>
+    </ul>
+       <header class="header">
+        <div class="box">
+            
+         
+         <h3>Космос</h3>
+       </div>
+       </header>
+ <span class="SkewedOne"></span> 
+    <span class="SkewedTwo"></span> 
+<section>
+    <div class="circle circle1">
+         <img  src="images/3.jpg">
+    </div>
+       
+    
+    
+    <div id="bobr">
+      <h2 class="frost _anim-items _anim">Главная</h2>
+      <p class="adic _anim-items _anim">Каким будет будущее трудно предугадать. Писатели-фантасты по-разному описывают будущее. Но в большинстве случаев они сходны в одном: в обществе людей появятся роботы, у которых будет искусственный интеллект, и люди начнут переселяться на другие планеты. Возможно, так оно и будет. Ведь когда-то люди думали, что земля плоская, но когда стали бороздить просторы океана и открывать материки, то поняли, что дела обстоит совсем по-другому.</p>
+      <p class="adic _anim-items _anim">Со временем люди также начнут открывать новые планеты, как когда-то открывали новые материки. Человек не может сидеть на месте, он устремлен в будущее, перед ним еще множество тайн, которые ему предстоит раскрыть.</p>
+      <p class="adic _anim-items _anim">Кто-то боится будущего, так как неизвестность всегда пугает. Что ждет человека через несколько сотен лет никто не знает. Очень многое зависит от самого человека, именно он создает историю и строит будущее. Наверное, самое главное заключается в том, чтобы люди позаботились о будущем для нового поколения, чтобы им не пришлось страдать от болезней, нехватки еды. Мы должны заботиться о будущем, о том, в каком состоянии достанется планета земля нашим потомкам.</p>
+     
+    </div>
+    <footer class ="footer">
+       <div class ="con">
+           <div class ="row">
+               <div class="footer-col">
+                   <h4>Организация</h4>
+                   <ul>
+                       <li><a href ="#">ГЦДТ имени В.П.Чкалова</a></li>
+                    
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Автор</h4>
+                   <ul>
+                       <li><a href ="#">Бусыгин Артём Дмитриевич</a></li>
+                     
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Страницы</h4>
+                   <ul>
+                    <li><a href ="index.html">Главная</a></li>
+                       <li><a href ="135.html">Ракеты</a></li>
+                       <li><a href ="fam.html">Проекты</a></li>
+                  
+                       <li><a href ="proekt.html">Источники</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <div class ="sg">                  
+                      <a href ="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href ="#"><i class="fab fa-twitter"></i></a>
+                      <a href ="#"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+               </div>
+           </div>
+       </div>
+       
+    </footer>  
+</section>
+
+
+</div>
+</div>
+
+
+    <script >
+        const animItems = document.querySelectorAll('._anim-items');
+
+if (animItems.length > 0) {
+    window.addEventListener('scroll', animOnScroll);
+    function animOnScroll(){
+        for (let index = 0; index < animItems.length; index++) {
+            const animItem = animItems[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                animItem.classList.add('_active');
+            } else {
+                if (!animItem.classList.contains('_anim')) {
+                animItem.classList.remove('_active');
+            }
+
+            }
+        }
+    }
+    function offset(el) {
+        const rect = el.getBoundingClientRect()
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    }
+    setTimeout(() => {
+        animOnScroll();
+    }, 300);
+}
+    </script>
+    </body>
+</html>
